@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netfilex</title>
+
+</head>
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: url("https://assets.nflxext.com/ffe/siteui/vlv3/c38a2d52-138e-48a3-ab68-36787ece46b3/eeb03fc9-99c6-438e-824d-32917ce55783/IN-en-20240101-popsignuptwoweeks-perspective_alpha_website_medium.jpg");
+        background-repeat: no-repeat;
+        background-position:center ;
+        background-size: cover;
+    }
+
+    #container {
+        width: 100%;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    nav {
+        width: 100%;
+
+    }
+
+    nav img {
+        width: 10.4rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+
+    .login-page {
+
+        width: 100%;
+        height: 35rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .login-page .content {
+        width: 32%;
+        height: 100%;
+        padding: 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+        background-color: #050204b3;
+    }
+
+    .login-page .content h1 {
+        font-size: 2rem;
+        text-transform: capitalize;
+        color: #FFFFFF;
+
+    }
+
+    .login-page .content input#email,
+    input#password {
+        width: 100%;
+        height: 3rem;
+        border-radius: 3px;
+        text-indent: 15px;
+        text-transform: capitalize;
+        font-size: 16px;
+        background: #333333;
+        border: none;
+        margin-bottom: 2.1rem;
+        color: #8C8C8C;
+
+    }
+
+    .login-page .content button {
+        width: 100%;
+        height: 3rem;
+        font-size: 1rem;
+        font-family: sans-serif;
+        font-weight: bold;
+        text-transform: capitalize;
+        background-color: #E50914;
+        border: none;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+    .login-page .content .box {
+        width: 100%;
+        margin-top: 0.8rem;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        color: #ffffff96;
+        justify-content:space-between
+    }
+
+   
+
+    .login-page .content .box a {
+        text-decoration: none;
+        color: #ffffff96;
+
+    }
+
+    .login-page .content .box2 a {
+        text-decoration: none;
+        color: #ffffff;
+
+    }
+
+    .login-page .content a:hover {
+        text-decoration: underline;
+    }
+
+    .login-page .content .box2 {
+        margin-top: 4rem;
+        color: #ffffff96;
+    }
+
+    @media screen and (min-width:280px) and (max-width:767px) {
+        body {
+            background: url()
+        }
+
+        nav {
+            height: 28vh;
+        }
+
+        nav img {
+            width: 7.4rem;
+            margin-top: 2rem;
+            margin-left: 2rem;
+        }
+
+
+        .login-page .content {
+            width: 100%;
+            height: 100vh;
+            padding: 2rem;
+        }
+
+        #container {
+            background-image: none;
+            background-color: black;
+        }
+
+      
+    }
+    @media screen and (min-width:768px) and (max-width:1024px){
+        body {
+            background: url()
+        }
+        #container {
+            background-image: none;
+            background-color: black;
+        }
+        .login-page .content{
+            width: 60%;
+
+        }
+
+
+    }
+</style>
+
+<body>
+    <div id="container">
+
+        <nav>
+            <img src="Netflix img/netflix-logo-png-2564.png" alt="netfilex-log">
+        </nav>
+        <div class="login-page">
+            <div class="content">
+                <h1>sign in</h1>
+                <form class="form" action="#">
+                    <input type="email" name="email" id="email" placeholder="email or phone number" required>
+                    <input type="password" name="password" id="password" placeholder="password" required>
+                    <button class="btn" type="submit">sign in</button>
+                    <div class="box">
+                       <span> <input type="checkbox" name="checkbox" id="checkbox">Remember me </span>
+                        <a href="#">Need help?</a>
+                    </div>
+                    <div class="box2">
+                        <p>New to Netflix? <a href="index.html">Sign up now</a></p>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script>
+    let btn =document.querySelector(".btn")
+    let form =document.querySelector(".form")
+    let inpEmail=document.querySelector("#email")
+    let inpass = document.querySelector("#password")
+    let email = "netflix@gmail.com";
+    let password = "abc12345"
+
+    btn.addEventListener("click",()=>{
+        changePage()
+
+    })
+
+    function changePage(){
+        if (inpEmail.value!==email) {
+            alert("email is incorrect");
+            confirm("try this email:netflix@gmail.com")
+        }else if(inpass.value!==password){
+            alert("password is incorrect");
+            confirm("try this password:abc12345")
+
+        }else{
+            form.action="./second.html"
+        }
+            
+
+    }
+    
+
+</script>
+</body>
+
+</html>
